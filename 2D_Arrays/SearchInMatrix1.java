@@ -1,13 +1,22 @@
 import java.util.*;
 
+//row are sorted from left to right
+//first integer of each row is greater than the last integer of previous row
+
 public class SearchInMatrix1{
     public static boolean searchInMatrix1(int matrix[][], int target){
+
+       
         
         int row=matrix.length;
         int col=matrix[0].length;
 
         int si=0,ei=row*col-1;
         int mid=si+(ei-si)/2;
+
+        if(target<matrix[0][0] || target>matrix[row-1][col-1]){
+            return false;
+        }
 
         while(si<=ei){
             int val=matrix[mid/col][mid%col];
