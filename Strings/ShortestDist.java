@@ -12,6 +12,7 @@ public class ShortestDist{
         }
 
         return Math.sqrt(((x*x)+(y*y)));
+        
     }
     public static void main(String args[]){
         Scanner sc=new Scanner(System.in);
