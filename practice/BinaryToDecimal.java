@@ -61,7 +61,7 @@ public class BinaryToDecimal{
         }
 
         System.out.println("Ans: "+ans);
-        sc.close();
+        sc.close();/////...,.,,,,,,,,;;;;..../////
 
 
     }
