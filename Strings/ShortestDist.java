@@ -17,7 +17,8 @@ public class ShortestDist{
     public static void main(String args[]){
         Scanner sc=new Scanner(System.in);
         String str=sc.nextLine();
-        double ans=shortestDist(str);
-        System.out.println("Shortest Distance: "+ans);
+        double ans=shortestDist(str); 
+        
+        System.out.println("Shortest Distance : "+ans);
     }
 }
