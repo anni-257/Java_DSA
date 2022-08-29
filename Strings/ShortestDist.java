@@ -5,8 +5,8 @@ public class ShortestDist{
         for(int i=0;i<str.length();i++){
             switch(str.charAt(i)){
                 case 'N':y++;break;
-                case 'S':y--;break;
-                case 'E':x++;break;
+                case 'S':y--;  break;
+                case 'E':x++;  break;
                 case 'W':x--;break;
             }
         }
