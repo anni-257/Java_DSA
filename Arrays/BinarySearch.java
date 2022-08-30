@@ -31,10 +31,10 @@ public class BinarySearch{
             }else{
                 l=mid+1;
             }
-            mid=l+(h-l)/2;
+            mid=l+(h-l)/ 2;
         }
 
-        return false;
+        return false ;
     }
 
 
