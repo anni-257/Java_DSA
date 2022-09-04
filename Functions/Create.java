@@ -9,7 +9,7 @@ public class Create{
     }
     public static void main(String arg[]){
         println("Hello I am Aniket");
-        print("Heyyyyyyyyyyyyyyyyy");
+        print("Heyyyyyyyyyyy");
         
     }
 }
