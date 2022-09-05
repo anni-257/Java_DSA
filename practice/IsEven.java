@@ -14,7 +14,7 @@ public class IsEven{
         System.out.print("Enter Number: ");
         int num=sc.nextInt();
 
-        System.out.println("isEven: "+(isEven(num)));
+        System.out.println("isEven:  "+(isEven(num)));
         sc.close();
        
     }
