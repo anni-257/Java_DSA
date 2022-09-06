@@ -16,11 +16,11 @@ public class IsPalindrome{
 
         return false;
     }
-    public static void main(String arg[]){
-        Scanner sc=new Scanner(System.in);
-        System.out.print("Enter number: ");
-        int n=sc.nextInt();
-        System.out.println("Ans: "+(isPalindrome(n)));
+    public static void  main(String arg[]){
+        Scanner sc=new  Scanner(System.in);
+        System.out.print ("Enter number: ");
+        int n=sc.nextInt ();
+        System.out.println ("Ans: "+(isPalindrome(n)));
         sc.close();
 
     }
