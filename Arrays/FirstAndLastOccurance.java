@@ -39,8 +39,8 @@ public class FirstAndLastOccurance{
         int ans[]=new int[2];
         int first=firstOccu(arr, key);
         int last=lastOccu(arr, key);
-        ans[0]=first;
-        ans[1]=last;
+        ans[0]= first;
+        ans[1]= last;
 
         return ans;
     }
