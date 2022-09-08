@@ -29,16 +29,16 @@ public class FirstAndLastOccurance{
             }else if(key<arr[mid]){
                 ei=mid-1;
             }else{
-                si=mid+1;
+                si=mid+ 1;
             }
             mid=si+(ei-si)/2;
         }
         return ans;
     }
-    public static int [] firstAndLastOccurance(int arr[],int key){
+    public static int [] firstAndLastOccurance(int arr[], int key){
         int ans[]=new int[2];
         int first=firstOccu(arr, key);
-        int last=lastOccu(arr, key);
+        int last=lastOccu(arr,  key);
         ans[0]= first;
         ans[1]= last;
 
@@ -50,7 +50,7 @@ public class FirstAndLastOccurance{
         System.out.print("Enter key: ");
         int key=sc.nextInt();
         int ans[]=firstAndLastOccurance(arr, key);
-        System.out.println("First Occurance: "+ans[0]);
-        System.out.println("Last Occurance: "+ans[1]);
+        System.out.println("First  Occurance: "+ans[0]);
+        System.out.println("Last  Occurance: "+ans[1]);
     }
 }
