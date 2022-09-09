@@ -46,7 +46,7 @@ public class FirstAndLastOccurance{
     }
     public static void main(String arg[]){
         Scanner sc=new Scanner(System.in);
-        int arr[]={1,2,3,3,3,3,4,4,4,5,6,8,10,10,10,12,12};
+        int arr[]={1,2,3,3,3,3,4,4,4,5,6,8,10,10, 10,12,12};
         System.out.print("Enter key: ");
         int key=sc.nextInt();
         int ans[]=firstAndLastOccurance(arr, key);
