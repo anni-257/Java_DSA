@@ -98,8 +98,8 @@ int main(){
     st.push(10);
     st.push(20);
     st.push(30);
-    st.display();
-    st.reverse();
+    st. display();
+    st. reverse();
     st.display();
 
     // cout<<"top: "<<st.peek()<<endl;
