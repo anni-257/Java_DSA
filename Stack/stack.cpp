@@ -94,7 +94,7 @@ void Stack:: reverse(){
 int main(){
 
     Stack st;
-    cout<<"isEmpty: "<<std::boolalpha<<st.isEmpty()<<endl;
+    cout<<"isEmpty: "<<std:: boolalpha<<st.isEmpty()<<endl;
     st.push(10);
     st.push(20);
     st.push(30);
