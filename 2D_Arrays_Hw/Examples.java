@@ -46,6 +46,9 @@ public class Examples{
             }
         }
          */
+
+
+         
         int mat2[][]=new int[cols][rows];
 
         for(int i=0;i<rows;i++){
