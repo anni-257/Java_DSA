@@ -57,7 +57,7 @@ public class CountNumberOfElements {
         int key=sc.nextInt();
         int ans[]=firstAndLastOccurance(arr, key);
         System.out.println("First Occurance: "+ans[0]);
-        System.out.println("Last Occurance: "+ans[1]);
+        System.out.println("Last Occurance: "+ ans[1]);
         System.out.println("Number Of Elements present: "+(countNumberOfElements(ans)));
     }
 }
