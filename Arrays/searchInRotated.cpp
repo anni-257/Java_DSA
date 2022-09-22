@@ -16,14 +16,14 @@ int  indexOfElement(int arr[],int size,int key){
                 l=mid+1;
             }
         }else{
-            if(key>arr[mid] && key<=arr[h]){
-                l=mid+1;
+            if(key>arr[mid]  && key<=arr[h]){
+                l=mid+1 ;
             }else{
-                h=mid-1;
+                h=mid-1 ;
             }
         }
 
-        mid=l+(h-l)/2;
+        mid=l+(h-l)/2 ;
     }
 
     return -1;
