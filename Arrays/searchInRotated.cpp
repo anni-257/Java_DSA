@@ -10,8 +10,8 @@ int  indexOfElement(int arr[],int size,int key){
             return mid;
         }
         else if(arr[l]<arr[mid]){
-            if(key>=arr[l] && key<arr[mid]){
-                h=mid-1;
+            if(key>=arr[l] && key<  arr[mid]){
+                h=mid- 1;
             }else{
                 l=mid+1;
             }
@@ -23,7 +23,7 @@ int  indexOfElement(int arr[],int size,int key){
             }
         }
 
-        mid=l+(h-l)/2 ;
+        mid=l+(h-l)/2  ;
     }
 
     return -1;
