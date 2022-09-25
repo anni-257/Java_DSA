@@ -13,10 +13,10 @@ void bubbleSort(int arr[], int n)
         }
     }
 }
-void display(int arr[], int size)
+void display(int arr[], int  size)
 {
     int i;
-    for (i = 0; i < size; i++)
+    for (i = 0; i < size;  i++)
         cout << arr[i] << " ";
     cout << endl;
 }
@@ -24,7 +24,7 @@ void display(int arr[], int size)
 
 int main()
 {
-    int arr[] = { 5, 1, 4, 2, 8};
+    int arr[] = { 5, 1, 4,  2, 8};
     int N = sizeof(arr) / sizeof(arr[0]);
     bubbleSort(arr, N);
     cout << "Sorted array: "<<endl;
