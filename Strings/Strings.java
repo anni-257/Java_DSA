@@ -11,7 +11,7 @@ public class Strings{
         String fname="Aniket";
         String lname=new String("Tarale");
         String fullname=fname+" "+lname; //concate
-        int length=fullname.length(); // function
+        int length=fullname.length( ); // function
         print(fullname);
 
     }
