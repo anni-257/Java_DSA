@@ -3,8 +3,8 @@ import java.util.Scanner;
 public class BinaryToDecimal{
 
     public static int decToBin(int num){
-        int ans=0;
-        int cnt=0;
+        int ans= 0;
+        int cnt= 0;
         /* 
         while(num!=0){
             int bit=num&1;
@@ -13,12 +13,12 @@ public class BinaryToDecimal{
         }*/
 
         while(num!=0){
-            int rem=num%2;
-            ans=(rem*(int)Math.pow(10,cnt++))+ans;
-            num=num/2;
+            int rem=num% 2;
+            ans=(rem*(int) Math.pow(10,cnt++))+ans;
+            num=num/2 ;
         }
 
-        return ans;
+        return ans ;
     }
 
 
