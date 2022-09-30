@@ -17,7 +17,7 @@ public class Examples{
         return cnt;
     }
 
-    public static int additionOfRowI(int mat[][],int i){
+    public static int additionOfRowI (int mat[][],int i){
         int sum=0;
         int rows=mat.length;
         int cols=mat[0].length;
@@ -32,7 +32,7 @@ public class Examples{
         return sum;
     }
 
-    public static int[][] transpose(int mat[][]){
+    public static int[][] transpose (int mat[][]){
         int rows=mat.length;
         int cols=mat[0].length;
 
