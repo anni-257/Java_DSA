@@ -14,13 +14,13 @@ public class Examples{
             }
         }
 
-        return cnt;
+        return cnt ;
     }
 
     public static int additionOfRowI (int mat[][],int i){
         int sum=0;
-        int rows=mat.length;
-        int cols=mat[0].length;
+        int rows=mat.length ;
+        int cols=mat[0].length ;
         if(rows<i){
             return 0;
         }
