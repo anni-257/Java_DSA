@@ -6,9 +6,9 @@ public class Examples{
         int cols=mat[0].length;
         int cnt;
         cnt=0;
-        for(int i=0;i<rows;i++){
+        for(int i=0;i <rows;i++){
             for(int j=0;j<cols;j++){
-                if(mat[i][j]==x){
+                if(mat[i] [j]==x){
                     cnt++;
                 }
             }
