@@ -2,7 +2,7 @@ import java.util.*;
 public class Examples{
 
     public static  int numOfTimes(int mat[][],int x){
-        int rows= mat.length;
+        int rows= mat.length ;
         int cols=mat[0].length;
         int cnt;
         cnt=0;
