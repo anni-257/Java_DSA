@@ -18,11 +18,11 @@ public class Examples{
     }
 
     public static int additionOfRowI (int mat[][],int i){
-        int sum=0;
+        int sum=0 ;
         int rows=mat.length ;
         int cols=mat[0].length ;
         if(rows<i){
-            return 0;
+            return 0 ;
         }
 
         for(int j=0;j<cols;j++){
