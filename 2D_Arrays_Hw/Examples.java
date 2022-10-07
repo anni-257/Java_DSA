@@ -8,7 +8,7 @@ public class Examples{
         cnt=0;
         for(int i=0;i <rows;i++){
             for(int j=0;j<cols;j++){
-                if(mat[i] [j]==x){
+                if(mat[i]  [j]==x){
                     cnt++;
                 }
             }
