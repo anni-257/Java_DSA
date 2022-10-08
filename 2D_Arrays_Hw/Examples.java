@@ -26,7 +26,7 @@ public class Examples{
         }
 
         for(int j=0;j<cols;j++){
-            sum+=mat[i][j];
+            sum+=mat[i][j] ;
         }
 
         return sum;
@@ -45,7 +45,7 @@ public class Examples{
                 mat[j][i]=temp;
             }
         }
-         */
+          */
 
 
          
@@ -57,7 +57,7 @@ public class Examples{
             }
         }
 
-        return mat2;
+        return mat2 ;
         
     }
     public static void main(String arg[]){
