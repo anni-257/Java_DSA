@@ -70,16 +70,16 @@ public class Examples{
 
         // System.out.print("Enter row number: ");
         // int x=sc.nextInt();
-        // System.out.println("Sum of "+x+"th row is: "+additionOfRowI(mat, x));
+        // System.out.println("Sum  of "+x+"th row is: "+additionOfRowI(mat, x));
 
-        System.out.println("Before Transpose");
+        System.out.println("Before  Transpose");
         for(int x[]:mat){
             for(int y:x){
-                System.out.print(y+" ");
+                System.out.print(y+"  ");
             }System.out.println();
         }
 
-        System.out.println("After Transpose");
+        System.out.println("After  Transpose");
         
         for(int x[]:transpose(mat)){
             for(int y:x){
