@@ -83,8 +83,8 @@ public class Examples{
         
         for(int x[]:transpose(mat)){
             for(int y:x){
-                System.out.print(y+" ");
-            }System.out.println();
+                System.out.print(y+"  ");
+            }System.out.println(); 
         }
 
         
