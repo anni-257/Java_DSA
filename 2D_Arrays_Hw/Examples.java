@@ -14,7 +14,7 @@ public class Examples {
             }
         }
 
-        return cnt ;
+        return cnt  ;
     }
 
     public static int additionOfRowI (int mat[][],int i){
