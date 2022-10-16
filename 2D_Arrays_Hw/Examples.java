@@ -3,7 +3,7 @@ public class Examples {
 
     public static  int numOfTimes(int mat[][],int x){
         int rows= mat.length;
-        int cols= mat[0].length ;
+        int cols=  mat[0].length ;
         int cnt ;
         cnt=0;
         for(int i=0;i <rows;i++){
