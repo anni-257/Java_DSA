@@ -1,5 +1,5 @@
 import java.util.*;
-public class Examples {
+public class  Examples {
 
     public static  int numOfTimes(int mat[][],int x){
         int rows= mat.length;
