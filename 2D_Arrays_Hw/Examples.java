@@ -17,7 +17,7 @@ public class  Examples {
         return cnt  ;
     }
 
-    public static int additionOfRowI (int mat[][],int i){
+    public static int additionOfRowI  (int mat[][],int i){
         int sum=0 ;
         int rows=mat.length ;
         int cols=mat[0].length ;
