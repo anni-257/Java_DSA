@@ -7,7 +7,7 @@ public class KadanesAlgo{
             if(cs<0){
                 cs=0;
             }
-            ms=Math.max(ms, cs) ;
+             ms=Math.max(ms, cs) ;
         }
 
         return ms;
