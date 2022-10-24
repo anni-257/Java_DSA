@@ -12,7 +12,7 @@ public class KadanesAlgo{
 
         return ms;
     }
-    public static void main(String arg[]){
+    public static  void main(String arg[]){
         int arr[]={1,-2,3,10,-6,4,100};
         int ans=MaxSubarraySum(arr);
         System.out.println("Max Subarray Sum: "+ans);
