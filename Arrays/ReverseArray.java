@@ -1,26 +1,14 @@
-import java.util.*;
-
-
-public class ReverseArray{
-
-    public static void create(int arr[]){
-        Scanner sc=new Scanner(System.in);
-        System.out.println("Enter Numbers");
-        for(int i=0;i<arr.length;i++){
-            arr[i]=sc.nextInt();
-        }
-    }
+class ReverseArray{
 
     public static void print(int arr[]){
-        Scanner sc=new Scanner(System.in);
-       
         for(int i=0;i<arr.length;i++){
             System.out.print(arr[i]+" ");
         }System.out.println();
     }
 
-    public static void reverseArray(int arr[]){
+    public static void reverse(int arr[]){
         int i=0,j=arr.length-1;
+
         while(i<j){
             int temp=arr[i];
             arr[i]=arr[j];
@@ -28,23 +16,13 @@ public class ReverseArray{
             i++;j--;
         }
     }
-
-
-    public static void main(String arg[]){
-
-        Scanner sc=new Scanner(System.in);
-        System.out.println("Enter size of Array");
-        int size=sc.nextInt();
-        int arr[]=new int[size];
-        create(arr);
-        System.out.println("Before Reverse");
-        print(arr);
-        reverseArray(arr);
-        System.out.println("After Reverse");
-        print(arr);
-
+    public static void main(String args[]){
         
+        int arr[]={1,2,3,4,5,6,7,8,9};
+        System.out.print("Array before reverse: ");
+        print(arr);
+        reverse(arr);
+        System.out.print("Array after reverse:  ");
+        print(arr);
     }
-
-
 }

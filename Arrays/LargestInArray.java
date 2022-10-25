@@ -1,46 +1,30 @@
-import java.util.Scanner;
-
 
 public class LargestInArray{
 
-    public static void create(int arr[]){
-        Scanner sc=new Scanner(System.in);
-        System.out.println("Enter Numbers");
-        for(int i=0;i<arr.length;i++){
-            arr[i]=sc.nextInt();
-        }
-    }
-
     public static void print(int arr[]){
-        Scanner sc=new Scanner(System.in);
-       
+        System.out.print("Elements of array: ");
         for(int i=0;i<arr.length;i++){
             System.out.print(arr[i]+" ");
         }System.out.println();
     }
 
-    public static int maximum(int arr[]){
-        int max=Integer.MIN_VALUE;
+    public static int maxElement(int arr[]){
+        int maxi=Integer.MIN_VALUE;
         for(int i=0;i<arr.length;i++){
-            if(max<arr[i]){
-                max=arr[i];
+            if(maxi<arr[i]){
+                maxi=arr[i];
             }
         }
 
-        return max;
+        return maxi;
     }
+    public static void main(String args[]){
+        int nums[]={11,22,33,44,55,100,66,300,43,23};
+        // System.out.println("");
+        print(nums);
+        int ans=maxElement(nums);
+        System.out.println("Largest number in an Array: "+ans);
 
 
-    public static void main(String arg[]){
-        Scanner sc=new Scanner(System.in);
-        System.out.println("Enter size of Array");
-        int size=sc.nextInt();
-        int arr[]=new int[size];
-        create(arr);
-        print(arr);
-        int max=maximum(arr);
-        System.out.println("Max in Array: "+max);
     }
-
-
 }

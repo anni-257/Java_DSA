@@ -1,31 +1,32 @@
 import java.util.Scanner;
-
-public class ArrayCreation{
-    public static void print(int arr[]){
-        for(int i=0;i<arr.length;i++){
-            System.out.print(arr[i]+" ");
-         }
+class ArrayCreation{
+    public static void input(int arr[],Scanner sc){
+        System.out.print("Enter number of subject marks want to fill: ");
+        int size=sc.nextInt();
+        System.out.println("Enter your marks");
+        for(int i=0;i<size;i++){
+          arr[i]=sc.nextInt();
+        }
     }
 
-    public static void input(int arr[]){
-        Scanner sc=new Scanner(System.in);
-        System.out.println("Enter Elements");
+    public static void print(int arr[],Scanner sc){
+        System.out.print("Enter number of subject marks want to print: ");
+        int size=sc.nextInt();
+        System.out.print("Your marks: ");
         for(int i=0;i<arr.length;i++){
-            arr[i]= sc.nextInt();
+            System.out.print(arr[i]+" ");
         }
-        sc.close();
+        System.out.println();
 
     }
     public static void main(String args[]){
         Scanner sc=new Scanner(System.in);
-        System.out.print("Enter size of Array: ");
-        int size=sc.nextInt(); 
-        int arr[]=new int[size];
-        print(arr);
-        input(arr);
-        print(arr);
+        System.out.println("Enter your number of subjects: ");
+        int size=sc.nextInt();
 
-        sc.close();
+        int marks[]=new int[size];
+        input(marks,sc);
+        print(marks,sc);
 
     }
 }

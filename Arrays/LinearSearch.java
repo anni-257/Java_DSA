@@ -1,50 +1,36 @@
 import java.util.Scanner;
+class LinearSearch{
 
-
-public class LinearSearch{
-
-    public static void create(int arr[]){
-        Scanner sc=new Scanner(System.in);
-        System.out.println("Enter Numbers");
+    public static int findIndex(int arr[],int key){
         for(int i=0;i<arr.length;i++){
-            arr[i]=sc.nextInt();
+            if(key==arr[i]){
+                return i;
+            }
         }
+
+        return -1;
     }
 
     public static void print(int arr[]){
-        Scanner sc=new Scanner(System.in);
-       
+        System.out.println("Array Element are: ");
         for(int i=0;i<arr.length;i++){
             System.out.print(arr[i]+" ");
-        }System.out.println();
-    }
-
-    public static boolean linearSearch(int arr[], int key){
-        for(int i=0;i<arr.length;i++){
-            if(arr[i]==key){
-                return true;
-            }
         }
-        return false;
+        System.out.println();
     }
-
-
     public static void main(String arg[]){
         Scanner sc=new Scanner(System.in);
-        System.out.println("Enter size of Array");
-        int size=sc.nextInt();
-        int arr[]=new int[size];
-        create(arr);
-        print(arr);
-        System.out.print("Enter key to be find: ");
+        int numbers[]={44,07,53,34,37,66,63,25,58,67};
+        print(numbers);
+        System.out.println("Enter the key that to be find: ");
         int key=sc.nextInt();
-        boolean ans=linearSearch(arr, key);
-        if(ans){
-            System.out.println("Found");
+
+        int index=findIndex(numbers,key);
+        if(index==-1){
+            System.out.println("Element is not found..!!");
         }else{
-            System.out.println("not Found");
+            System.out.println("Element is found at: "+index);
         }
+
     }
-
-
 }

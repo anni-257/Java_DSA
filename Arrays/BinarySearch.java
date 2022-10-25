@@ -1,58 +1,55 @@
 import java.util.Scanner;
 
 
-public class BinarySearch{
-
-    public static void create(int arr[]){
-        Scanner sc=new Scanner(System.in);
-        System.out.println("Enter Numbers");
-        for(int i=0;i<arr.length;i++){
-            arr[i]=sc.nextInt();
-        }
-    }
-
+class BinarySearch{
     public static void print(int arr[]){
-        Scanner sc=new Scanner(System.in);
-       
+        System.out.println("Array Elements are: ");
         for(int i=0;i<arr.length;i++){
             System.out.print(arr[i]+" ");
-        }System.out.println();
+        }
+        System.out.println();
     }
 
-    public static boolean binarySearch(int arr[], int key){
-        int l=0,h=arr.length-1;
-        int mid=l+(h-l)/2;
+    public static int binarySearch(int arr[],int target){
+        int low=0,high=arr.length-1;
+        int mid=low+(high-low)/2;
 
-        while(l<=h){
-            if(arr[mid]==key)
-                return true;
-            else if(key<arr[mid]){
-                h=mid-1;
-            }else{
-                l=mid+1;
+        while(low<=high){
+            if(target==arr[mid])
+            {
+                return mid;
             }
-            mid=l+(h-l)/ 2;
+            else if(arr[mid]<target)
+            {
+                low=mid+1;
+            }
+            else
+            {
+                high=mid-1;
+            }
+            
+            mid=low+(high-low)/2;
         }
 
-        return false ;
+        return -1;
     }
-
-
-    public static void main(String arg[]){
+    public static void main(String args[]){
         Scanner sc=new Scanner(System.in);
-        System.out.println("Enter size of Array");
-        int size=sc.nextInt();
-        int arr[]=new int[size];
-        create(arr);
-        print(arr);
-        System.out.print("Enter key to be find: ");
+        int nums[]={1,2,10,30,45,56,68,90};
+        System.out.println(">>>>> Binary Search <<<<<");
+        print(nums);
+        System.out.print("Enter number to be search: ");
         int key=sc.nextInt();
-        boolean ans=binarySearch(arr, key);
-        if(ans){
-            System.out.println("Found");
+
+        int index=binarySearch(nums,key);
+        if(key==-1){
+            System.out.println("Element is not found..!!");
         }else{
-            System.out.println("not Found");
+            System.out.println("Element is found at index of "+index);
         }
+
+
+
     }
 
 
