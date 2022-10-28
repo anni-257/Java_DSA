@@ -1,42 +1,29 @@
-import java.util.*;
-public class RainWater_Trapping{
+class RainWater_Trapping{
+    public static int trappedWater(int elevation[]){
+        int len=elevation.length;
+        int leftMax[]=new int[len];
+        int rightMax[]=new int[len];
 
-    public static int rainWater_Trapping(int arr[]){
-        int len=arr.length;
-        int ans=0;
-       int leftMax[]=new int[len];
-       int rightMax[]=new int[len];
+        leftMax[0]=elevation[0];
+        for(int i=1;i<len;i++){
+            leftMax[i]=Math.max(leftMax[i-1],elevation[i]);
+        }
+        rightMax[len-1]=elevation[len-1];
+        for(int i=len-2;i>-1;i--){
+            rightMax[i]=Math.max(rightMax[i+1],elevation[i]);
+        }
 
-       leftMax[0]=arr[0];
-       for(int i=1;i<len;i++){
-            if(leftMax[i-1]<arr[i]){
-                leftMax[i]=arr[i];
-            }else{
-                leftMax[i]=leftMax[i-1];
-            }
-       }
+        int tw=0,wl=0,width=1;
+        for(int i=0;i<len;i++){
+            wl=Math.min(leftMax[i],rightMax[i]);
+            tw+=(wl-elevation[i])*width;
+        }
 
-       rightMax[len-1]=arr[len-1];
-       for(int i=len-2;i>=0;i--){
-            if(rightMax[i+1]<arr[i]){
-                rightMax[i]=arr[i];
-            }else{
-                rightMax[i]=rightMax[i+1];
-            }
-       }
-
-      for(int i=0;i<len;i++){
-        int wl=Math.min(leftMax[i],rightMax[i]);
-        ans+=(wl-arr[i]);
-      }
-
-       return ans;
+        return tw;
 
     }
-    public static void main(String arg[]){
-        int arr[]={1,4,3,2,6,4,3};
-
-        int ans=rainWater_Trapping(arr);
-        System.out.println("Ans: "+ans);
+    public static void main(String args[]){
+        int elevation[]={4,1,0,5,3,1,4};
+        System.out.println("Trapped water in bars: "+trappedWater(elevation));
     }
 }
