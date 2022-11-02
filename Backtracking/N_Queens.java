@@ -62,6 +62,6 @@ class N_Queens{
             }
         }
 
-        nQueens(board,0);
+         nQueens(board,0);
     }
 }
