@@ -2,7 +2,7 @@ import java.util.*;
 // Integers in each row are sorted in ascending from left to right.
 // Integers in each column are sorted in ascending from top to bottom.
 public class SearchInMatrix2{
-    public static boolean SearchInMatrix2(int matrix[][],int target){
+    public static boolean searchInMatrix2(int matrix[][],int target){
     
 
         if(target<matrix[0][0] || target>matrix[matrix.length-1][matrix[0].length-1]){
@@ -29,6 +29,7 @@ public class SearchInMatrix2{
         int matrix[][]={{10,20,30,40},{15,25,35,45},{27,29,37,48},{32,33,39,50}};
         System.out.print("Enter target value: ");
         int target=sc.nextInt();
-        System.out.println(SearchInMatrix2(matrix, target));
+        System.out.println(searchInMatrix2(matrix, target));
+        sc.close();
     }
 }
