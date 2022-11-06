@@ -136,18 +136,71 @@ public class LinkedList{
        return helper(head,key);
     }
     public void reverseList(){
-
-        Node newHead=null;
-
+        Node prev=null;
+        tail=head;
         while(head!=null){
-            Node next=head.next ;
-            head.next=newHead;
-            newHead=head;
+            Node next=head.next;
+            head.next=prev;
+            prev=head;
             head=next;
         }
 
-        head=newHead;
+        head=prev;
     }
+    public Node recHelper(Node head){
+        if(head==null || head.next==null){
+            return head;
+        }
+
+        Node newHead=recHelper(head.next);
+        head.next.next=head;
+        head.next=null;
+
+        return newHead;
+    }
+    public void recReverseList(){
+        tail=head;
+        head=recHelper(head);
+    }
+
+    public void deleteNodeFromEnd(int n){
+        
+        int ifrmStr=size-n;
+        if(n==size){
+            head=head.next;
+            size--;
+            return;
+        }
+        Node prev=head;
+        int i=0;
+        while(i<ifrmStr-1){
+            prev=prev.next;
+            i++;
+        }
+
+        prev.next=prev.next.next;
+        size--;
+    }
+    public void helperDeleteNodeFromEnd(Node temp, int arr[]){
+        if(temp==null){
+            return ;
+        }
+
+        helperDeleteNodeFromEnd(temp.next,arr);
+        
+        arr[0]--;
+        System.out.println(arr[0]);
+        if(arr[0]==-1){
+            temp.next=temp.next.next;
+            return;
+        }
+    }
+
+    public void recDeleteNodeFromEnd(int n){
+        int arr[]={n};
+        helperDeleteNodeFromEnd(head,arr);
+    }
+
     public void print(){
         System.out.println("<-----LinkedList----->");
         Node temp=head;
@@ -184,7 +237,13 @@ public class LinkedList{
         ll.print();
         ll.reverseList();
         ll.print();
+        ll.recReverseList();
+        ll.print();
+        //ll.deleteNodeFromEnd(3);;
+        ll.recDeleteNodeFromEnd(3);
+        ll.print();
         System.out.println("Size of LinkedList: "+ll.length());
+
 
     }
 }
