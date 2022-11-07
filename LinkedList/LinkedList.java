@@ -147,12 +147,12 @@ public class LinkedList{
 
         head=prev;
     }
-    public Node recHelper(Node head){
+    public Node recReverseNodes(Node head){
         if(head==null || head.next==null){
             return head;
         }
 
-        Node newHead=recHelper(head.next);
+        Node newHead=recReverseNodes(head.next);
         head.next.next=head;
         head.next=null;
 
@@ -160,7 +160,7 @@ public class LinkedList{
     }
     public void recReverseList(){
         tail=head;
-        head=recHelper(head);
+        head=recReverseNodes(head);
     }
 
     public void deleteNodeFromEnd(int n){
@@ -199,8 +199,101 @@ public class LinkedList{
     public void recDeleteNodeFromEnd(int n){
         int arr[]={n};
         helperDeleteNodeFromEnd(head,arr);
+        size--;
     }
 
+    public boolean isPalindrome(){
+        Node slow,fast,temp=head;
+        slow=fast=head;
+
+        while(fast.next!=null && fast.next.next!=null){
+            slow=slow.next;
+            fast=fast.next.next;
+        }
+
+        slow.next=recReverseNodes(slow.next);
+       // print();
+        Node temp2=slow.next;
+
+        while(temp2!=null){
+            if(temp.val!=temp2.val){
+                return false;
+            }
+            temp=temp.next;
+            temp2=temp2.next;
+        }
+        slow.next=recReverseNodes(slow.next);
+        return true;
+        
+
+    }
+
+    public void linkNodes(int str,int des){
+      str--;
+      Node temp1,temp2;
+      temp1=temp2=head;
+      while(str!=0){
+        temp1=temp1.next;
+        str--;
+      }
+      des--;
+      while(des!=0){
+        temp2=temp2.next;
+        des--;
+      }
+      
+      temp2.next=temp1;
+
+    }
+    public boolean isCycle(){
+        if(head==null){
+            return false;
+        }
+        Node slow,fast;
+        slow=fast=head;
+        while(fast!=null && fast.next!=null){
+            slow=slow.next;
+            fast=fast.next.next;
+            if(fast==slow){
+                return true;
+            }
+        }
+
+        return false;
+    }
+    public void removeCycle(){
+        if(head==null){
+            return;
+        }
+        Node slow,fast;
+        slow=fast=head;
+        boolean flag=false;
+        while(fast!=null && fast.next!=null){
+            slow=slow.next;
+            fast=fast.next.next;
+            if(slow==fast){
+                flag=true;
+                break;
+            }
+        }
+        if(!flag){
+            System.out.println("Cycle is not present");
+            return;
+        }
+        Node start=slow;
+        while(start!=fast){
+            start=start.next;
+            fast=fast.next;
+        }
+
+        Node temp=fast;
+        while(fast.next!=temp){
+            fast=fast.next;
+        }
+
+        fast.next=null;
+    }
+   
     public void print(){
         System.out.println("<-----LinkedList----->");
         Node temp=head;
@@ -212,7 +305,8 @@ public class LinkedList{
     }
 
     public static void main(String args[]){
-        LinkedList ll=new LinkedList();
+       /*
+       LinkedList ll=new LinkedList();
         ll.print();
         ll.removeFirst();
         ll.removeLast();
@@ -242,7 +336,39 @@ public class LinkedList{
         //ll.deleteNodeFromEnd(3);;
         ll.recDeleteNodeFromEnd(3);
         ll.print();
-        System.out.println("Size of LinkedList: "+ll.length());
+        System.out.println("Size of LinkedList: "+ll.isPalindrome());
+
+        LinkedList lll=new LinkedList();
+        lll.addFirst(10);
+        lll.addFirst(20);
+        lll.addFirst(30);
+        lll.addFirst(40);
+        lll.addFirst(50);
+        lll.addFirst(40);
+        lll.addFirst(30);
+        lll.addFirst(20);
+        lll.addFirst(10);
+        System.out.println(lll.isPalindrome());
+        lll.print();
+
+        */ 
+
+        LinkedList ll=new LinkedList();
+
+        ll.addFirst(10);
+        ll.addFirst(20);
+        ll.addFirst(30);
+        ll.addFirst(40);
+        ll.addFirst(50);
+        ll.addFirst(60);
+        ll.addFirst(70);
+        ll.addFirst(80);
+        ll.print();
+        ll.linkNodes(2, 5);
+        ll.removeCycle();
+        ll.removeCycle();
+        System.out.println("isCycle present in LL: "+ll.isCycle());
+       
 
 
     }
