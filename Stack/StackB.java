@@ -1,6 +1,7 @@
 
 import java.util.*;
 class StackB{
+    
     /* implementation of stack using LinkedList
 
     static class Node{
@@ -137,6 +138,7 @@ class StackB{
         if(st.isEmpty()){
             return;
         }
+
         int temp=st.pop();
         reverseStack(st);
         bottomPush(st, temp);
@@ -159,6 +161,7 @@ class StackB{
         System.out.println(name);
         name=reverseString(name);
         System.out.println(name);
+
     }
     
         
