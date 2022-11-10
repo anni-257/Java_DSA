@@ -2,6 +2,7 @@
 import java.util.*;
 class StackB{
     
+    
     /* implementation of stack using LinkedList
 
     static class Node{
