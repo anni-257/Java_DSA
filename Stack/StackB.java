@@ -10,7 +10,7 @@ class StackB{
         Node next;
         Node(int data){
             this.data=data;
-            this.next=null;
+            this.next=null; 
         }
     }
     static class Stack{
@@ -105,10 +105,13 @@ class StackB{
      
     */
 
+
+
     public static void bottomPush(Stack<Integer> st,int data){
         if(st.isEmpty()){
             st.push(data);
             return;
+            
         }
 
         int temp=st.pop();
