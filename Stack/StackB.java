@@ -112,6 +112,7 @@ class StackB{
             st.push(data);
             return;
             
+            
         }
 
         int temp=st.pop();
