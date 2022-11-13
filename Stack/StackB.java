@@ -3,6 +3,7 @@ import java.util.*;
 class StackB{
     
     
+    
     /* implementation of stack using LinkedList
 
     static class Node{
@@ -111,8 +112,6 @@ class StackB{
         if(st.isEmpty()){
             st.push(data);
             return;
-            
-            
         }
 
         int temp=st.pop();
