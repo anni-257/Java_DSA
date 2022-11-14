@@ -16,7 +16,7 @@ class StackB{
     }
     static class Stack{
         /* Implementation Using ArrayList
-         ArrayList<Integer> list=new ArrayList<>();
+         ArrayList<Integer> list=new ArrayList 
         public boolean isEmpty(){
             if(list.size()==0){
                 return true;
