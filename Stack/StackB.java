@@ -141,6 +141,7 @@ class StackB{
     public static void reverseStack(Stack<Integer>st){
         if(st.isEmpty()){
             return;
+            
         }
 
         int temp=st.pop();
