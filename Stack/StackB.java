@@ -147,6 +147,7 @@ class StackB{
         int temp=st.pop();
         reverseStack(st);
         bottomPush(st, temp);
+        
     }
 
     public static void main(String args[]){
