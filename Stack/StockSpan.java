@@ -28,6 +28,7 @@ class StockSpan{
         int span[]=new int[stocks.length];
         stockSpan(stocks,span);
 
+        
         for(int x:span){
             System.out.print(x+" ");
         }
