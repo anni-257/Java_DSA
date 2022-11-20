@@ -30,6 +30,7 @@ class StockSpan{
 
         
         for(int x:span){
+            
             System.out.print(x+" ");
         }
     }
