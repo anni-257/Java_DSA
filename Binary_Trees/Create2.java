@@ -148,6 +148,24 @@ public class Create2 {
 
         }
 
+        public boolean isIdentical(Node root,Node subRoot){
+
+            if(root==null && subRoot==null){
+                return true;
+            }else if(root.data!=subRoot.data || root==null || subRoot==null){
+                return false;
+            }
+
+            if(!isIdentical(root.left, subRoot.left)){
+                return false;
+            }
+            if(!isIdentical(root.right, subRoot.right)){
+                return false;
+            }
+
+            return true;
+        }
+
         public boolean isSubTree(Node root,Node subRoot){
             if(root==null){
                 return false;
@@ -165,8 +183,10 @@ public class Create2 {
     }
     public static void main(String args[]){
         int nodes[]={1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1};
+        int nodes2[]={2,4,-1,-1,5,-1,-1};
         BinaryTree tree=new BinaryTree();
         Node root=tree.buildBtree(nodes);
+        Node root2=tree.buildBtree(nodes2);
         System.out.println("---PreOrder---");
         tree.preOrder(root);
         System.out.println();
@@ -185,6 +205,8 @@ public class Create2 {
         BinaryTree.Info n=tree.diameterHeight(root);
         System.out.println("Height: "+n.ht);
         System.out.println("Diameter: "+n.diam);
+
+        System.out.println("isSubTree: "+tree.isIdentical(root, root2));
 
 
 
