@@ -36,9 +36,10 @@ class Rectangle{
 
 
 public class Test{
-    public static void main(String arg[]){
+    public static void main(String[] arg){
         Rectangle r=new Rectangle();
         r.setter(10, 20);
+        
         System.out.println("length: "+r.getLength()+"\n"+"Width: "+r.getWidth());
         System.out.println("Area of a rectangle: "+r.area());
         System.out.println("Perimeter of rectangle: "+r.perimeter());
